@@ -1,0 +1,32 @@
+package com.ds.poc;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+public class DatasourceTestApplication {
+
+	@Autowired
+	DataSource dataSource;
+
+	public static void main(String[] args) {
+		SpringApplication.run(DatasourceTestApplication.class, args);
+	}
+
+	@RestController
+	class DemoService {
+		@RequestMapping(value = "/verizon/poc/create", method = RequestMethod.POST, produces = {
+				"application/json" }, consumes = { "application/json" })
+		public void getMessageForService(@PathVariable String name) {
+
+			return ;
+		}
+	}
+}

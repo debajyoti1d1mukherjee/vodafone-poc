@@ -1,0 +1,27 @@
+package com.adaptor.iview;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.adaptor.iview.beans.IviewRequest;
+import com.adaptor.iview.beans.IviewResponse;
+
+
+@SpringBootApplication
+public class IViewAdaptorServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(IViewAdaptorServiceApplication.class, args);
+	}
+	
+	@Bean
+	   public IviewRequest getIviewRequestRequest() {
+	      return new IviewRequest();
+	   }
+	
+	@Bean
+	   public IviewResponse getAppAppdirectResponse() {
+	      return new IviewResponse();
+	   }
+}

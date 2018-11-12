@@ -1,0 +1,45 @@
+package com.adaptor.iview.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.adaptor.iview.beans.FacadeRequest;
+import com.adaptor.iview.beans.FacadeResponse;
+import com.adaptor.iview.beans.IviewRequest;
+import com.adaptor.iview.beans.IviewResponse;
+import com.adaptor.iview.mapper.IviewRequestMapper;
+import com.adaptor.iview.mapper.IviewResponseMapper;
+
+
+
+
+@RestController
+public class CSUAIViewAdaptorController {
+	
+
+	@Autowired
+	IviewRequestMapper requestMapper;
+	@Autowired
+	IviewResponseMapper responseMapper;
+
+	public CSUAIViewAdaptorController(){}
+
+	   @RequestMapping(value="/csua/appdirect/create", method = RequestMethod.POST,produces = { "application/json"},consumes={"application/json"})
+	    public FacadeResponse createUserAccount(@RequestBody FacadeRequest facadeRequest) {
+		   System.out.println("CSUAAppdirectAdaptorController.createUserAccount invoked--");
+		   IviewRequest request = requestMapper.prepareIviewRequest(facadeRequest);
+		   //Fire IviewBackend Call//
+		   IviewResponse iviewResponse = new IviewResponse();
+		   iviewResponse.setCustId("100");
+		   //                   //
+		   
+		   
+	       return responseMapper.prepareFacadeResponse(iviewResponse);
+	    }
+	   
+
+}

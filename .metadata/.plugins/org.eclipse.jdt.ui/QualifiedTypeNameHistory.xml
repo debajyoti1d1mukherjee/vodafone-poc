@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+<fullyQualifiedTypeName name="com.csua.beans.FacadeRequest"/>
+<fullyQualifiedTypeName name="com.csua.beans.FacadeResponse"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
+<fullyQualifiedTypeName name="org.apache.http.HttpEntity"/>
+<fullyQualifiedTypeName name="org.springframework.http.HttpHeaders"/>
+<fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="com.csua.beans.AppdirectRequest"/>
+<fullyQualifiedTypeName name="com.csua.beans.AppdirectResponse"/>
+<fullyQualifiedTypeName name="com.adaptor.iview.mapper.IviewRequestMapper"/>
+<fullyQualifiedTypeName name="com.adaptor.iview.mapper.IviewResponseMapper"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="com.adaptor.iview.beans.IviewRequest"/>
+<fullyQualifiedTypeName name="com.adaptor.iview.beans.FacadeRequest"/>
+<fullyQualifiedTypeName name="com.adaptor.iview.beans.IviewResponse"/>
+<fullyQualifiedTypeName name="com.adaptor.iview.beans.FacadeResponse"/>
+<fullyQualifiedTypeName name="com.adaptor.appdirect.beans.AppdirectResponse"/>
+<fullyQualifiedTypeName name="com.adaptor.appdirect.beans.FacadeRequest"/>
+<fullyQualifiedTypeName name="com.adaptor.appdirect.beans.AppdirectRequest"/>
+<fullyQualifiedTypeName name="com.adaptor.appdirect.mapper.AppdirectRequestMapper"/>
+<fullyQualifiedTypeName name="com.adaptor.appdirect.mapper.AppdirectResponseMapper"/>
+<fullyQualifiedTypeName name="com.adaptor.appdirect.beans.FacadeResponse"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+</qualifiedTypeNameHistroy>

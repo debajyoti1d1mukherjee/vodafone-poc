@@ -1,0 +1,5 @@
+package com.adaptor.iview.mapper;
+
+public class IviewResponseMapper {
+
+}

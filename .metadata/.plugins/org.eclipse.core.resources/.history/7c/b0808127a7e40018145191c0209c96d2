@@ -1,0 +1,12 @@
+package com.adaptor.appdirect;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class IViewAdaptorServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(IViewAdaptorServiceApplication.class, args);
+	}
+}

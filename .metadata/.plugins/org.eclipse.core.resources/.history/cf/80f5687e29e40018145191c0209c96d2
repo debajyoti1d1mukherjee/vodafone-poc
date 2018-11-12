@@ -1,0 +1,5 @@
+package com.csua.beans;
+
+public class FacadeRequest {
+
+}

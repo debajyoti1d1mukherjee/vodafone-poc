@@ -1,0 +1,45 @@
+package com.adaptor.appdirect;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.adaptor.appdirect.beans.AppdirectRequest;
+import com.adaptor.appdirect.mapper.AppdirectRequestMapper;
+import com.adaptor.appdirect.mapper.AppdirectResponseMapper;
+import com.adaptor.iview.beans.FacadeResponse;
+import com.adaptor.iview.beans.IviewRequest;
+import com.adaptor.iview.mapper.IviewRequestMapper;
+import com.adaptor.iview.mapper.IviewResponseMapper;
+
+
+@SpringBootApplication
+public class AppdirectAdaptorServiceApplication {
+	
+
+
+	public static void main(String[] args) {
+		SpringApplication.run(AppdirectAdaptorServiceApplication.class, args);
+	}
+	
+	@Bean
+	   public AppdirectRequest getAppdirectRequest() {
+	      return new AppdirectRequest();
+	   }
+	
+
+	@Bean
+	   public AppdirectRequestMapper getAppdirectRequestMapper() {
+	      return new AppdirectRequestMapper();
+	   }
+	@Bean
+	   public AppdirectResponseMapper getIviewResponseMapper() {
+	      return new AppdirectResponseMapper();
+	   }
+	
+	@Bean
+	   public FacadeResponse getFacadeResponse() {
+	      return new FacadeResponse();
+	   }
+}

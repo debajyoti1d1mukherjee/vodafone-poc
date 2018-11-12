@@ -1,0 +1,52 @@
+package com.csua.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.csua.beans.AppdirectRequest;
+import com.csua.beans.AppdirectResponse;
+import com.csua.beans.FacadeRequest;
+import com.csua.beans.FacadeResponse;
+
+@RestController
+public class CSUAFacadeController {
+
+	@Autowired
+	RestTemplate restTemplate;
+	@Autowired
+	AppdirectRequest request;
+	@Autowired
+	AppdirectResponse response;
+
+	public CSUAFacadeController() {
+	}
+
+	@RequestMapping(value = "/csua/create", method = RequestMethod.POST, produces = { "application/json" },consumes={"application/json"})
+	public FacadeResponse createUserAccount(@RequestBody FacadeRequest facadeRequest) {
+		System.out.println("CSUAFacadeController.createUserAccount invoked--");
+		request.setName(facadeRequest.getName()); 
+		String uri="";
+		if("appdirect".equalsIgnoreCase(facadeRequest.getRouteId())){
+			uri = "http://localhost:8085/csua/appdirect/create";
+			
+		}else{
+			uri = "http://localhost:8086/csua/iview/create";
+		}
+		
+		FacadeResponse response = restTemplate.postForObject( uri, request, FacadeResponse.class);
+		
+		return response;
+	}
+
+	@RequestMapping(value = "/csua/get", method = RequestMethod.POST, produces = { "application/json" },consumes={"application/json"})
+	public FacadeResponse getUserAccount(@RequestBody FacadeRequest facadeRequest) {
+		System.out.println("CSUAFacadeController.getUserAccount invoked--");
+		FacadeResponse response = new FacadeResponse();
+		response.setCustomerId("100");
+		return response;
+	}
+}

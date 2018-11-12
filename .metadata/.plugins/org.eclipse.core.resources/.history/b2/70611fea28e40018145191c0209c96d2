@@ -1,0 +1,30 @@
+package com.csua;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+public class CsuaFasadeServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CsuaFasadeServiceApplication.class, args);
+	}
+}
+
+
+
+@RestController
+class MessageRestController {
+
+	
+	public MessageRestController(){}
+
+   @RequestMapping(value="/greeting/{str}", method = RequestMethod.GET,produces = { "application/json"})
+    public String getMessageForMessageRestController(@PathVariable("str") String str) {
+	   System.out.println("FEIGN CALLED-------------------------------------++++++++++++++++++++++str="+str);
+	   LOGGER.info("---------getMessageForMessageRestController------------------"+str);
+       return "Test Logging  "+str;
+    }
+   
+	}

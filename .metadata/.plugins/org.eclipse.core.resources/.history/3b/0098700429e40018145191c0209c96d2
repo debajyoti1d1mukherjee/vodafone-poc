@@ -1,0 +1,22 @@
+package com.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+
+@RestController
+public class CSUAFacadeController {
+
+	public CSUAFacadeController(){}
+
+	   @RequestMapping(value="/csua/create", method = RequestMethod.POST,produces = { "application/json"})
+	    public String createUserAccount(@PathVariable("str") String str) {
+		   System.out.println("FEIGN CALLED-------------------------------------++++++++++++++++++++++str="+str);
+		   LOGGER.info("---------getMessageForMessageRestController------------------"+str);
+	       return "Test Logging  "+str;
+	    }
+}
